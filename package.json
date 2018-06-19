@@ -1,6 +1,6 @@
 {
   "name": "react-apollo-create-fragment-container",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Relay style createFragmentContainer for React Apollo",
   "main": "lib/createFragmentContainer.js",
   "scripts": {
