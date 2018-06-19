@@ -1,0 +1,66 @@
+{
+  "name": "react-apollo-create-fragment-container",
+  "version": "0.0.1",
+  "description": "Relay style createFragmentContainer for React Apollo",
+  "main": "lib/createFragmentContainer.js",
+  "scripts": {
+    "clean": "rimraf lib dist coverage",
+    "lint": "eslint .",
+    "build": "npm run clean && babel src --out-dir lib --ignore __tests__",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags && npm run clean",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "lib/"
+  ],
+  "keywords": [
+    "react",
+    "apollo",
+    "react-apollo",
+    "fragment",
+    "container",
+    "masking"
+  ],
+  "author": {
+    "name": "C.T. Lin",
+    "email": "chentsulin@gmail.com",
+    "url": "github.com/chentsulin/react-apollo-create-fragment-container"
+  },
+  "license": "MIT",
+  "repository": "react-apollo-create-fragment-container",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.9.1",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.5",
+    "prettier-package-json": "^1.6.0",
+    "react": "^16.4.1"
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^2.5.5",
+    "react-apollo": "^2.1.5"
+  },
+  "peerDependencies": {
+    "react": ">=15"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "package.json": [
+      "prettier-package-json --write",
+      "git add"
+    ]
+  }
+}
